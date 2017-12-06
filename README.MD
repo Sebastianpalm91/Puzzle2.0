@@ -1,5 +1,5 @@
 <img src="https://media.giphy.com/media/FPjbHO0jJxGsE/giphy.gif" alt="funnyMemory" height="100%" width="100%">
-
+## PLZ ADVICE! This link has my original commits... https://github.com/Sebastianpalm91/Puzzle
 # Fuzzle Puzzle Memory Game
 
 ## Puzzle-Project with Javascript
