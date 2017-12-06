@@ -1,8 +1,8 @@
 <img src="https://media.giphy.com/media/FPjbHO0jJxGsE/giphy.gif" alt="funnyMemory" height="100%" width="100%">
-## PLZ ADVICE! This link has my original commits...
-<a href="https://github.com/Sebastianpalm91/Puzzle"></a>
 # Fuzzle Puzzle Memory Game
 
+## PLZ ADVICE! This link has my original commits...
+<a href="https://github.com/Sebastianpalm91/Puzzle"></a>
 ## Puzzle-Project with Javascript
 <p>This is the first Javascript project. The project is to build a memory game with the following criterias:<p>
 <ul>
