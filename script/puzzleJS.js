@@ -17,6 +17,9 @@ containerBody.addEventListener('mousemove',(e) => {
   containerBody.style.backgroundPosition = `${e.pageX - 285}px ${e.pageY - 255}px`;
   console.log(e);
 });
+
+
+
 //Declaring my variables
 const puzzleCard = document.querySelectorAll('.puzzle');
 const readyGo = document.querySelector('.readyGo');
@@ -29,6 +32,7 @@ const highScore = document.querySelector('.highScore');
 const animated = document.querySelectorAll('.animated');
 const shuffle = document.querySelector('.shuffle');
 const scoreList = document.querySelector('li');
+const audioPlay = document.querySelector('audio')
 const puzzleList = Array.from(puzzleCard);
 // Clock timer
 var time = document.getElementsByTagName('h2')[0],
@@ -52,7 +56,7 @@ let compare = (dataset, callback) => {
       container.classList.add('pointer-stop');
       setTimeout(function () {
         container.classList.remove('pointer-stop');
-      }, 1000)
+      }, 1500)
 
     }
     pause();
@@ -75,29 +79,24 @@ let compare = (dataset, callback) => {
         clearTimeout(t);
         setTimeout(function() {
           highScore.style.display = "block";
-          // cardSuccesBox.style.display = "block";
         }, 1000);
       }
     }
     else {
       setTimeout(function(){
         completed[1].classList.remove('turn')
-        completed[1].classList.remove('turn')
         completed[0].classList.remove('turn')
+        completed[1].classList.remove('turn')
         completed[0].classList.remove('turn')
         puzzleArray = [];
         completed = [];
       },1500);
     }
   }
-  if (puzzleArray.length == 3) {
-    completed[0].classList.remove('turn')
-    completed[1].classList.remove('turn')
-    completed[2].classList.remove('turn')
-  }
 };
-// Starting different timefunctions when user clicks on start timer
+// Starting different timeOutfunctions when user clicks on start timer
 startTimer.addEventListener('click', () => {
+  audioPlay.play();
   startTimer.style.display = "none";
   readyGo.style.opacity = "1";
   setTimeout(function() {
@@ -108,9 +107,9 @@ startTimer.addEventListener('click', () => {
   },2000)
   setTimeout(function() {
     readyGo.textContent = "Go"
+    container.classList.remove('pointer-stop');
   },3000)
   bounce.classList.add('bounce');
-  container.classList.remove('pointer-stop');
   setTimeout(function() {
     readyGo.style.opacity = "0";
   },3500)
@@ -131,7 +130,7 @@ startTimer.addEventListener('click', () => {
   timer();
   startTimer.onclick = timer;
   console.log(timer);
-},5000)
+},3800)
 })
 //Looping through my array
 Array.from(puzzleCard).forEach( (puzzleCard) => {
@@ -139,8 +138,6 @@ Array.from(puzzleCard).forEach( (puzzleCard) => {
   // Creating a clickevent for the cards and calling the callback function
   puzzleCard.addEventListener('click', (e) => {
     puzzleCard.classList.toggle('turn');
-    // starttimer = "true";
-    // 	timer();
     const dataset = e.target.dataset.puzzle;
     const puzzleTarget = puzzleArray.push(dataset);
     completed.push(puzzleCard);
@@ -159,8 +156,6 @@ Array.from(puzzleCard).forEach( (puzzleCard) => {
     puzzleCard.classList.remove('turn');
     puzzleCard.classList.remove('success');
     puzzleCard.classList.remove('boxShadow');
-    // cardSuccesBox.style.display = "none";
-    // cardSuccesBox.style.display = "none";
     for (var i = container.children.length; i >= 0; i--) {
       container.appendChild(container.children[Math.random() * i | 0]);
     }
