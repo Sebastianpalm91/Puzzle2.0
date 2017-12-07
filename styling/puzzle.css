@@ -84,7 +84,6 @@ button:active {
   opacity: 1;
   pointer-events: none;
   z-index: 1;
-  transition: all 0.5s ease-in-out;
 }
 .readyGo {
   display: flex;
@@ -94,6 +93,7 @@ button:active {
   color: white;
   padding-top: 20%;
   margin: 0 auto;
+  transition: all 0.5s ease-in-out;
 }
 
 .puzzleContainer {
@@ -113,7 +113,7 @@ button:active {
 }
 
 .puzzle {
-  background-image: url('../images/str_logo.png');
+  background-image: url('../images/str_logo2.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -191,3 +191,21 @@ li {
   list-style: decimal;
   text-align: center;
 }
+ @media screen and (max-width: 414px) {
+   .containerBody {
+     background: none;
+   }
+   .puzzleContainer {
+     width: 100%;
+     top: 2%;
+   }
+   .puzzle {
+     width: 22%;
+   }
+   .readyGo {
+     padding-top: 80%;
+   }
+   .header {
+     padding-top: 5%;
+   }
+ }
