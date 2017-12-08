@@ -24,6 +24,7 @@ Array.from(puzzleCard).forEach( (puzzleCard) => {
     highScore.style.display = "none";
     body.classList.add('pointer-stop');
     time.textContent = "00:00";
+    seconds = 0, minutes = 0;
     clearTimeout(t);
     shuffle.classList.remove('shuffle');
     bounce.classList.remove('bounce');
@@ -57,6 +58,9 @@ Array.from(puzzleCard).forEach( (puzzleCard) => {
         puzzleCard.classList.add('boxShadow');
         startTimer.classList.add('bounce')
         startTimer.style.display = "block";
+        time.textContent = "00:00";
+        seconds = 0, minutes = 0;
+        clearTimeout(t);
         setTimeout(function(){
           body.classList.remove('pointer-stop');
         }, 500);
