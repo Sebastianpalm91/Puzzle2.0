@@ -22,6 +22,7 @@ Array.from(puzzleCard).forEach( (puzzleCard) => {
   //Resetting the game and shuffle the cards
   resetGame.addEventListener('click', () => {
     highScore.style.display = "none";
+    body.classList.add('pointer-stop');
     time.textContent = "00:00";
     clearTimeout(t);
     shuffle.classList.remove('shuffle');
@@ -56,6 +57,9 @@ Array.from(puzzleCard).forEach( (puzzleCard) => {
         puzzleCard.classList.add('boxShadow');
         startTimer.classList.add('bounce')
         startTimer.style.display = "block";
+        setTimeout(function(){
+          body.classList.remove('pointer-stop');
+        }, 500);
       }
     }, 1800);
   })

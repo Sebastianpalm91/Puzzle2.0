@@ -3,6 +3,7 @@ startTimer.addEventListener('click', () => {
   audioPlay.play();
   clearTimeout(t);
   seconds = 0, minutes = 0;
+  body.classList.add('pointer-stop');
   startTimer.style.display = "none";
   setTimeout(function() {
     readyGo.style.opacity = "1";
@@ -13,10 +14,11 @@ startTimer.addEventListener('click', () => {
   },2000)
   setTimeout(function() {
     readyGo.textContent = "Go"
-    container.classList.remove('pointer-stop');
   },3000)
   bounce.classList.add('bounce');
   setTimeout(function() {
+    container.classList.remove('pointer-stop');
+    body.classList.remove('pointer-stop');
     readyGo.style.opacity = "0";
   },3500)
   startTimer.classList.remove('bounce');

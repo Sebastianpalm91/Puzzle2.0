@@ -2,6 +2,7 @@
 const puzzleCard = document.querySelectorAll('.puzzle');
 const readyGo = document.querySelector('.readyGo');
 const resetGame = document.querySelector('button');
+const body = document.querySelector('body');
 const bounce = document.querySelector('.bounce');
 const container = document.querySelector('.puzzleContainer');
 const boxShadow = document.querySelectorAll('boxShadow');
@@ -15,10 +16,7 @@ const puzzleList = Array.from(puzzleCard);
 var time = document.getElementsByTagName('h2')[0],
 seconds = 0, minutes = 0,
 t;
-//Random numbers given to each elements data-set-'value' befor start
-for (var i = container.children.length; i >= 0; i--) {
-  container.appendChild(container.children[Math.random() * i | 0]);
-}
+
 //Creating empty Arrays and a scorecounter
 let puzzleArray = [];
 let completed = [];

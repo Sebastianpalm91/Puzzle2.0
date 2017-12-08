@@ -1,3 +1,7 @@
+//Random numbers given to each elements data-set-'value' befor start
+for (var i = container.children.length; i >= 0; i--) {
+  container.appendChild(container.children[Math.random() * i | 0]);
+}
 // function for the callback, score counter and logic to game rules
 let compare = (dataset, callback) => {
   if (puzzleArray.length == 2) {
