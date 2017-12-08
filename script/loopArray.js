@@ -5,7 +5,6 @@
 //       5, Make a visually displayed shuffle function
 //       6, Make the user able to choose difficulty
 //       7, Fix the BUG when turning 3 cards fast the 1st wont turn back
-
 //Looping through my array
 Array.from(puzzleCard).forEach( (puzzleCard) => {
   puzzleCard.classList.add('boxShadow');
@@ -16,7 +15,6 @@ Array.from(puzzleCard).forEach( (puzzleCard) => {
     const puzzleTarget = puzzleArray.push(dataset);
     completed.push(puzzleCard);
     puzzleCard.classList.add('boxShadow');
-    console.log(e.target.dataset.puzzle);
     return compare(e.target.dataset.puzzle);
   })
   //Resetting the game and shuffle the cards

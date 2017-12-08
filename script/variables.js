@@ -16,7 +16,6 @@ const puzzleList = Array.from(puzzleCard);
 var time = document.getElementsByTagName('h2')[0],
 seconds = 0, minutes = 0,
 t;
-
 //Creating empty Arrays and a scorecounter
 let puzzleArray = [];
 let completed = [];

@@ -24,20 +24,18 @@ startTimer.addEventListener('click', () => {
   startTimer.classList.remove('bounce');
   // Starting a TimeOut set to initiate 300ms after above And starting my timer
   setTimeout(function() {
-  function add() {
-    seconds++;
-    if (seconds >= 60) {
-      seconds = 0;
-      minutes++;
+    function add() {
+      seconds++;
+      if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+      }
+      time.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+      timer();
     }
-    time.textContent = (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+    function timer() {
+      t = setTimeout(add, 1000);
+    }
     timer();
-  }
-  function timer() {
-    t = setTimeout(add, 1000);
-  }
-  timer();
-
-  console.log(timer);
-},3800)
+  },3800)
 })

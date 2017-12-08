@@ -11,7 +11,6 @@ let compare = (dataset, callback) => {
       setTimeout(function () {
         container.classList.remove('pointer-stop');
       }, 1500)
-
     }
     pause();
     if (puzzleArray[0] == puzzleArray[1]) {
@@ -20,7 +19,6 @@ let compare = (dataset, callback) => {
       puzzleArray = [];
       completed = [];
       cardSucces++;
-      console.log(cardSucces);
       //IF all cards completed, display the winning box
       if (cardSucces === 8) {
         // Saves my "timer" to a variable and uses it to add the score to my list
