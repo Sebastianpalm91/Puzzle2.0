@@ -1,9 +1,11 @@
 // Starting different timeOutfunctions when user clicks on start timer
 startTimer.addEventListener('click', () => {
   audioPlay.play();
+  clearTimeout(t);
+  seconds = 0, minutes = 0;
   startTimer.style.display = "none";
-  readyGo.style.opacity = "1";
   setTimeout(function() {
+    readyGo.style.opacity = "1";
     readyGo.textContent = "Ready"
   },1000)
   setTimeout(function() {
@@ -33,7 +35,7 @@ startTimer.addEventListener('click', () => {
     t = setTimeout(add, 1000);
   }
   timer();
-  startTimer.onclick = timer;
+
   console.log(timer);
 },3800)
 })

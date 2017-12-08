@@ -23,7 +23,6 @@ Array.from(puzzleCard).forEach( (puzzleCard) => {
   resetGame.addEventListener('click', () => {
     highScore.style.display = "none";
     time.textContent = "00:00";
-    seconds = 0; minutes = 0;
     clearTimeout(t);
     shuffle.classList.remove('shuffle');
     bounce.classList.remove('bounce');
