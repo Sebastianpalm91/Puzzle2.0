@@ -40,8 +40,6 @@ let compare = (dataset, callback) => {
       setTimeout(function(){
         completed[1].classList.remove('turn')
         completed[0].classList.remove('turn')
-        completed[1].classList.remove('turn')
-        completed[0].classList.remove('turn')
         puzzleArray = [];
         completed = [];
       },1500);
