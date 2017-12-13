@@ -40,7 +40,7 @@ The repository must contain a .editorconfig file with your preferred settings.<b
 
 ## How to install
 
-<p>Download the repository and unzip it on in chosen location. Open the directory and click on the puzzle.html file. It should open up in your browser if not, right-click on the file and open with-> "your browser". All set. Happy playing :)</p>
+<p>Download the repository and unzip it on in chosen location. Open the directory and click on the puzzle.html file. It should open up in your browser if not, right-click on the file and open with-> "your browser". PLEASE ADVICE, for best experience head to the directory called "stranger things" and install the FONT. All set. Happy playing :)</p>
 
 ### Testing done by:
 
