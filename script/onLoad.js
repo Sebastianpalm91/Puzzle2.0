@@ -1,3 +1,4 @@
+"use strict";
 // made an event on load-page
 window.addEventListener('load', () => {
   startTimer.classList.remove('bounce');

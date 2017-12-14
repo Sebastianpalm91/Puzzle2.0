@@ -1,3 +1,4 @@
+"use strict";
 //Declaring my variables
 const puzzleCard = document.querySelectorAll('.puzzle');
 const readyGo = document.querySelector('.readyGo');

@@ -1,3 +1,4 @@
+"use strict";
 // Flashlight moving in the background based on mouse position
 const containerBody = document.querySelector('.containerBody');
 containerBody.addEventListener('mousemove',(e) => {

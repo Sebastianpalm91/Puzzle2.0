@@ -1,10 +1,3 @@
-// TODO: 1, Make an array of the puzzleCards
-//       2, Make each puzzleCard get a random position
-//       3, Make each PuzzleCard get a random number
-//       4, Make a resetButton and give it a random number
-//       5, Make a visually displayed shuffle function
-//       6, Make the user able to choose difficulty
-//       7, Fix the BUG when turning 3 cards fast the 1st wont turn back
 //Looping through my array
 Array.from(puzzleCard).forEach( (puzzleCard) => {
   puzzleCard.classList.add('boxShadow');

@@ -1,3 +1,4 @@
+"use strict";
 // Starting different timeOutfunctions when user clicks on start timer
 startTimer.addEventListener('click', () => {
   audioPlay.play();
